@@ -5,7 +5,7 @@ const monthHeader =['Sunday','Monday','Tuesday','Wednesday','Thrusday','Friday',
 const CalendarHeader = () => {
   return (
     <>
-    <div style={{display:"flex",justifyContent:"space-between",padding:"0px 30px"}} >
+     <div className="grid grid-cols-7 px-4 py-2">
     {monthHeader.map((month,index)=>{
         return <CalenderHeaderTile key={index}  tileName={month} />
     })}
