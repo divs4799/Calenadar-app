@@ -5,7 +5,6 @@ import { Calendar } from "@/components/ui/calendar";
 
 const MiniCalendar = () => {
     const [date, setDate] = React.useState<Date | undefined>(new Date())
-
   return (
     <>
 

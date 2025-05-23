@@ -1,0 +1,16 @@
+.calendarBox{
+    background-color: #FAFAFA;
+    color: #616161;
+    min-height: 100px;
+    outline:0.2px solid #616161;
+    padding: 10px;
+}
+.calendarBoxActive{
+     border:0.3px solid #5B5FC7;
+}
+.headerTile{
+        flex:0 1 14.28%;
+        padding:5px;
+        border:0.5px solid #616161;
+        color:#616161;
+}

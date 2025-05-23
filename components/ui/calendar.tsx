@@ -6,15 +6,21 @@ import { DayPicker } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-
+import { useCalendar } from "@/dataStructures/CalendarContext"
 function Calendar({
   className,
   classNames,
   showOutsideDays = true,
   ...props
 }: React.ComponentProps<typeof DayPicker>) {
+ const [selected,setSelected] = React.useState(new Date());
+ const {date, setDate} = useCalendar();
   return (
     <DayPicker
+   animate
+      mode="single"
+      selected={date}
+      onSelect={setDate}
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
@@ -67,7 +73,7 @@ function Calendar({
           <ChevronRight className={cn("size-4", className)} {...props} />
         ),
       }}
-      {...props}
+  
     />
   )
 }

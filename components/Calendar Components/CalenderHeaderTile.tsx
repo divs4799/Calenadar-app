@@ -1,13 +1,8 @@
 import React from 'react'
-
+import style from '@/components/styles/MainCalendar.module.css'
 const CalenderHeaderTile = ({tileName}:{tileName:string}) => {
   return (
-    <div style={{
-        flex:"0 1 14.28%",
-        padding:"5px",
-        border:"1px solid black"
-    }} >
-        
+    <div className={style.headerTile} >
         {tileName}</div>
   )
 }
